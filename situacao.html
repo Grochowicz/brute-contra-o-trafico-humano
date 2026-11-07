@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Sirius | Sua situação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brandmark">S</div>
+    <div>SIRIUS <small>UM ESPAÇO DE APOIO</small></div>
+  </a>
+  <div class="top-actions">
+    <span class="privacy-label">Você escolhe o que compartilhar.</span>
+    <button class="exit" type="button" onclick="quickExit()">Saída rápida ×</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="index.html">← Voltar</a>
+  <div class="pill">Orientação</div>
+  <h2>O que está acontecendo ou aconteceu com você?</h2>
+  <p class="muted">Escolha a opção mais próxima. Não existe resposta certa ou errada. A escolha vai só no endereço desta visita e não é gravada.</p>
+  <div class="choices">
+    <a class="choice" href="orientacao.html?tipo=scam"><b>Fui obrigado(a) a trabalhar em golpes virtuais</b><span>Por exemplo, em uma central de scams ou fraude online.</span></a>
+    <a class="choice" href="orientacao.html?tipo=abuse"><b>Sofri violência ou abuso</b><span>Violência física, sexual, psicológica ou ameaças.</span></a>
+    <a class="choice" href="orientacao.html?tipo=confined"><b>Não posso sair livremente</b><span>Estou sob vigilância, ameaça ou tiveram meus documentos retidos.</span></a>
+    <a class="choice" href="orientacao.html?tipo=escaped"><b>Consegui sair do local</b><span>Estou em outro lugar e preciso de proteção ou orientação.</span></a>
+    <a class="choice" href="orientacao.html?tipo=other"><b>Não tenho certeza / outra situação</b><span>Quero entender quais opções existem.</span></a>
+  </div>
+
+  <footer class="footer">
+    <strong>SIRIUS</strong> · Protótipo demonstrativo de acolhimento e orientação.<br>
+    Conteúdo informativo. Não substitui atendimento consular, jurídico, médico ou emergencial. Endereços de abrigos não são publicados sem verificação de segurança e disponibilidade.
+  </footer>
+</main>
+<script src="app.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

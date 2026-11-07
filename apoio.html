@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Sirius | Apoio e contatos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brandmark">S</div>
+    <div>SIRIUS <small>UM ESPAÇO DE APOIO</small></div>
+  </a>
+  <div class="top-actions">
+    <span class="privacy-label">Você escolhe o que compartilhar.</span>
+    <button class="exit" type="button" onclick="quickExit()">Saída rápida ×</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="index.html">← Voltar ao início</a>
+  <div class="pill">Apoio e acolhimento</div>
+  <h2>Vamos pensar em quem pode ajudar.</h2>
+  <p class="muted">Você não precisa fornecer sua localização exata para ler estas opções.</p>
+
+  <div class="field">
+    <label for="city">Localização (opcional)</label>
+    <input id="city" type="text" placeholder="Cidade ou região no Camboja" autocomplete="off" />
+    <div class="hint">Se for seguro e útil, você pode informar apenas a cidade ou região. O protótipo não transmite nem grava essa informação.</div>
+  </div>
+  <div class="btnrow">
+    <button class="btn secondary" type="button" onclick="showLocationInfo()">Ver orientação para esta região</button>
+    <button class="btn secondary" type="button" onclick="document.getElementById('city').value='';document.getElementById('locationInfo').classList.add('hidden')">Limpar campo</button>
+  </div>
+  <div id="locationInfo" class="result hidden"></div>
+
+  <div class="callout warm">
+    <b>Sobre encontrar um abrigo</b>
+    <p>Não exibimos endereços de abrigos sem validação atual de segurança, disponibilidade e critérios de acolhimento. Um endereço incorreto pode colocar você em risco.</p>
+  </div>
+
+  <div class="card">
+    <h3>Assistência consular brasileira responsável pelo Camboja</h3>
+    <p>O território do Camboja é atendido pela Embaixada do Brasil em Bangkok, Tailândia.</p>
+    <p class="small">Pela <cite>Lei nº 13.344/2016, art. 6º, § 2º</cite>, no exterior a assistência imediata a vítimas brasileiras fica a cargo da rede consular e deve ser prestada independentemente da situação migratória, da ocupação ou de outro status.</p>
+    <div class="result contact">
+      <div>
+        <strong>Setor Consular – Embaixada do Brasil em Bangkok</strong>
+        <p>+66 2 679-8567 / +66 2 679-8568</p>
+        <p class="small">E-mail: consular.bangkok@itamaraty.gov.br<br>Endereço: 34º andar, Lumpini Tower, 1168/101 Rama IV Road, Thungmahamek, Sathorn, Bangkok 10120, Tailândia.</p>
+      </div>
+      <button class="copy" type="button" onclick="copyText('+66 2 679-8567')">Copiar telefone</button>
+    </div>
+    <div class="result contact">
+      <div>
+        <strong>Plantão consular no Brasil</strong>
+        <p>+55 (61) 98260-0610</p>
+        <p class="small">Canal para emergências extremas envolvendo brasileiros no exterior, incluindo tráfico de pessoas, violência e risco à segurança. Não é canal para dúvidas consulares comuns.</p>
+      </div>
+      <button class="copy" type="button" onclick="copyText('+55 61 98260-0610')">Copiar telefone</button>
+    </div>
+    <div class="result contact">
+      <div>
+        <strong>Ministério da Justiça e Segurança Pública – Brasil</strong>
+        <p>+55 (61) 2025-9663</p>
+        <p class="small">E-mail: traficodepessoas@mj.gov.br. Canal institucional para informações sobre a rede brasileira de enfrentamento ao tráfico de pessoas.</p>
+      </div>
+      <button class="copy" type="button" onclick="copyText('+55 61 2025-9663')">Copiar telefone</button>
+    </div>
+  </div>
+  <p class="disclaimer">Importante: contatos e horários podem mudar. Se não conseguir falar com um canal, tente outro meio de contato seguro. Não viaje para outra cidade ou país sem um plano seguro e orientação adequada.</p>
+  <div class="btnrow">
+    <a class="btn" href="retorno.html">Entender as opções de retorno ao Brasil</a>
+  </div>
+
+  <footer class="footer">
+    <strong>SIRIUS</strong> · Protótipo demonstrativo de acolhimento e orientação.<br>
+    Conteúdo informativo. Não substitui atendimento consular, jurídico, médico ou emergencial. Endereços de abrigos não são publicados sem verificação de segurança e disponibilidade.
+  </footer>
+</main>
+<script src="app.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Sirius | Um espaço de apoio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brandmark">S</div>
+    <div>SIRIUS <small>UM ESPAÇO DE APOIO</small></div>
+  </a>
+  <div class="top-actions">
+    <span class="privacy-label">Você escolhe o que compartilhar.</span>
+    <button class="exit" type="button" onclick="quickExit()">Saída rápida ×</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="kicker">Acolhimento para brasileiros no Camboja</div>
+    <h1>Você merece estar em um lugar seguro.</h1>
+    <p class="lead">Se alguém enganou você, ameaçou, explorou seu trabalho ou impediu que você fosse embora, há caminhos para buscar proteção. Você não precisa enfrentar isso sozinho(a).</p>
+    <div class="soft-note">Respire. Você pode ir no seu ritmo. Não é necessário informar seu nome, telefone ou documentos para ler estas orientações. Se não for seguro continuar, feche esta página.</div>
+  </div>
+
+  <div class="card" id="checklist">
+    <div class="pill">Comece por aqui</div>
+    <h2>Checklist de proteção</h2>
+    <p class="muted">Os itens ficam só nesta tela, enquanto ela estiver aberta. Nada é gravado.</p>
+    <label class="check"><input type="checkbox" /><span><b>Proteja esta leitura.</b> Se alguém vigia o celular, use a saída rápida ou outro aparelho.</span></label>
+    <label class="check"><input type="checkbox" /><span><b>Não confronte quem controla o local</b> e não avise que pretende sair, se isso puder aumentar o risco.</span></label>
+    <label class="check"><input type="checkbox" /><span><b>Fale com a rede consular.</b> Plantão para emergência extrema: +55 (61) 98260-0610.</span></label>
+    <label class="check"><input type="checkbox" /><span><b>A lei já prevê ajuda.</b> A Lei nº 13.344/2016, art. 6º, § 2º, garante assistência consular imediata a vítimas brasileiras no exterior, qualquer que seja a situação migratória ou a ocupação.</span></label>
+    <label class="check"><input type="checkbox" /><span><b>O retorno pode ser avaliado mesmo sem passaporte.</b> O Decreto nº 5.017/2004 (Protocolo de Palermo), art. 8, prevê o regresso com atenção à segurança e a emissão de documento de viagem quando faltar papel.</span></label>
+    <div class="btnrow">
+      <a class="btn" href="apoio.html">Ver contatos</a>
+      <a class="btn secondary" href="retorno.html">Como voltar ao Brasil</a>
+      <a class="btn secondary" href="situacao.html">Orientação da minha situação</a>
+      <button class="btn secondary" type="button" onclick="openSirius()">Falar com Sirius</button>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:17px">
+    <div class="card">
+      <div class="kicker">Na legislação brasileira</div>
+      <h3>Proteção que já existe</h3>
+      <ul class="list">
+        <li><cite>Lei nº 13.344/2016, art. 1º</cite> — alcança o tráfico cometido no exterior contra vítima brasileira.</li>
+        <li><cite>Art. 2º, VI</cite> — a atenção não depende de colaborar com investigação ou processo.</li>
+        <li><cite>Art. 6º</cite> — inclui assistência jurídica, social, de trabalho e de saúde, acolhimento provisório e preservação da identidade.</li>
+        <li><cite>Código Penal, art. 149-A</cite> — recrutar, transportar ou alojar alguém mediante ameaça, violência, fraude ou abuso, para exploração, é crime.</li>
+      </ul>
+      <a class="btn secondary" href="orientacao.html#leis">Ler as citações completas</a>
+    </div>
+    <div class="card soft-note warm" style="margin:0">
+      <div class="kicker">Antes de continuar</div>
+      <h3>Está em perigo agora?</h3>
+      <p>Se você estiver em risco imediato, tente chegar a um local público ou a um serviço de saúde confiável, se isso puder ser feito sem aumentar o perigo. Em uma emergência, acione o serviço local adequado se for seguro.</p>
+      <p class="small">Se alguém monitora seu celular: talvez seja mais seguro usar um dispositivo de confiança, de outra pessoa, ou pedir ajuda presencialmente a alguém confiável.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <strong>SIRIUS</strong> · Protótipo demonstrativo de acolhimento e orientação.<br>
+    Conteúdo informativo. Não substitui atendimento consular, jurídico, médico ou emergencial. Endereços de abrigos não são publicados sem verificação de segurança e disponibilidade.
+  </footer>
+</main>
+<script src="app.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

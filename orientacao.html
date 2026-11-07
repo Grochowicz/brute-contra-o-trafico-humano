@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Sirius | Orientação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brandmark">S</div>
+    <div>SIRIUS <small>UM ESPAÇO DE APOIO</small></div>
+  </a>
+  <div class="top-actions">
+    <span class="privacy-label">Você escolhe o que compartilhar.</span>
+    <button class="exit" type="button" onclick="quickExit()">Saída rápida ×</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="situacao.html">← Voltar</a>
+  <div class="pill">Orientação para sua situação</div>
+  <h2 id="guidanceTitle">Próximos passos</h2>
+  <div id="guidanceBody"></div>
+  <p id="returnIntro" class="muted"></p>
+  <div id="leis" data-laws></div>
+  <div class="btnrow">
+    <a class="btn" href="apoio.html">Ver opções de apoio</a>
+    <a class="btn secondary" href="index.html">Voltar ao início</a>
+  </div>
+
+  <footer class="footer">
+    <strong>SIRIUS</strong> · Protótipo demonstrativo de acolhimento e orientação.<br>
+    Conteúdo informativo. Não substitui atendimento consular, jurídico, médico ou emergencial. Endereços de abrigos não são publicados sem verificação de segurança e disponibilidade.
+  </footer>
+</main>
+<script src="app.js"></script>
+<script>
+const guidance={
+  scam:{title:'Vamos priorizar um contato seguro e especializado',intro:'A orientação é priorizar proteção e acolhimento especializado. Só depois, com apoio, avaliar os próximos passos para um possível retorno.',html:`
+    <div class="callout">Se você foi forçado(a) a trabalhar em golpes virtuais: ameaças, fraude, dívida imposta, retenção de documentos e impedimento de sair podem ser sinais de exploração e tráfico de pessoas. Você merece proteção, independentemente do que foi obrigado(a) a fazer.</div>
+    <p>Se puder, faça contato discreto com a assistência consular brasileira ou com uma organização especializada em proteção de vítimas. Peça orientação para chegar a um local de acolhimento seguro antes de tentar sair ou se deslocar, se isso reduzir o risco. Evite confrontar os responsáveis, avisar sobre seus planos ou retornar sozinho(a) ao local de exploração. Explique se seu telefone é monitorado, se há vigilância ou se você teme retaliação.</p>
+    <div class="callout warm">Neste cenário, o primeiro passo sugerido é buscar proteção especializada e acolhimento, não abordar diretamente a polícia se isso puder aumentar o perigo. A decisão sobre envolver autoridades locais deve ser avaliada com profissionais de proteção e considerando o risco individual.</div>
+    <p>O <cite>Código Penal, art. 149-A</cite>, descreve recrutar ou alojar alguém mediante ameaça, fraude ou abuso para exploração como tráfico de pessoas. Se você foi obrigado(a) a praticar um crime, o <cite>art. 22</cite> trata da coação irresistível: só responde quem coage, quando a coação é irresistível. Um defensor avalia o caso.</p>`},
+  abuse:{title:'Sua saúde e sua segurança vêm primeiro',intro:'A orientação é cuidar primeiro da sua integridade e buscar atendimento seguro. O contato consular pode ajudar a organizar proteção e avaliar o retorno.',html:`
+    <div class="callout alert">Se sofreu violência física ou sexual, está ferido(a) ou corre risco imediato: procure atendimento médico ou um serviço de emergência local, se puder fazê-lo com segurança.</div>
+    <p>Se for seguro, procure um serviço de saúde ou autoridades locais para proteção imediata e registro da violência. Se houver perigo imediato, tente chegar a um local público seguro e peça ajuda emergencial. Entre em contato com a assistência consular brasileira e informe que sofreu violência ou abuso no Camboja. Peça apoio especializado para acolhimento, atendimento médico, orientação jurídica e avaliação de risco.</p>
+    <div class="callout warm">A orientação de procurar autoridades locais depende da segurança concreta do caso. Se houver risco de envolvimento dos agressores ou retaliação, peça apoio consular ou especializado para planejar o contato.</div>
+    <p>A <cite>Lei nº 13.344/2016, art. 6º, I e § 3º</cite>, inclui assistência jurídica, social e de saúde, com recuperação física e psicológica.</p>`},
+  confined:{title:'Não se coloque em mais perigo para pedir ajuda',intro:'As opções de retorno devem ser avaliadas junto com sua segurança, necessidades imediatas e situação documental.',html:`
+    <div class="callout alert">Se você está sob vigilância ou impedido(a) de sair: evite confrontar quem controla o local ou anunciar que pretende fugir se isso puder provocar violência.</div>
+    <p>Se possível, use um dispositivo que não seja monitorado ou peça ajuda presencialmente a alguém de confiança. Procure contato discreto com a assistência consular brasileira ou com uma organização de proteção. Informe se seus documentos foram retidos, se há ameaças e se você consegue conversar sem ser observado(a). Peça ajuda para construir um plano individual de saída e acolhimento seguro.</p>
+    <p>Se houver risco imediato à vida, busque ajuda emergencial quando isso puder ser feito sem aumentar o perigo.</p>
+    <p>Pela <cite>Lei nº 13.344/2016, art. 6º, § 2º</cite>, no exterior a assistência imediata a vítimas brasileiras fica a cargo da rede consular, independentemente da situação migratória ou da ocupação.</p>`},
+  escaped:{title:'Você conseguiu sair. Agora vamos buscar apoio',intro:'As opções de retorno devem ser avaliadas junto com sua segurança, necessidades imediatas e situação documental.',html:`
+    <div class="callout">Você não precisa resolver tudo de uma vez. Se já saiu do local, tente permanecer em um ambiente seguro e evite compartilhar seu endereço com pessoas que possam representar risco.</div>
+    <p>Peça encaminhamento para acolhimento especializado e avaliação de segurança. Contate a assistência consular brasileira e informe que saiu de uma possível situação de tráfico ou exploração. Solicite orientação sobre atendimento médico, apoio psicossocial, documentos e possibilidade de retorno ao Brasil.</p>
+    <p>A <cite>Lei nº 13.344/2016, art. 6º, II</cite>, prevê acolhimento e abrigo provisório entre as medidas de proteção.</p>`},
+  other:{title:'Você pode pedir ajuda mesmo sem ter certeza',intro:'As opções de retorno devem ser avaliadas junto com sua segurança, necessidades imediatas e situação documental.',html:`
+    <div class="callout">Não é necessário saber o nome jurídico do que aconteceu. Promessas falsas de trabalho, ameaças, retenção de documentos, dívidas impostas, vigilância e restrição de liberdade são situações que merecem avaliação especializada.</div>
+    <p>Procure a assistência consular brasileira ou uma organização especializada em proteção. Compartilhe apenas o que se sentir seguro(a) para contar. Peça avaliação de risco e opções de acolhimento antes de tomar decisões que possam expor você.</p>
+    <p>A <cite>Lei nº 13.344/2016, art. 2º, VI</cite>, afirma que a atenção à vítima não depende de colaborar com investigação ou processo judicial.</p>`}
+};
+const tipo=new URLSearchParams(location.search).get('tipo');
+const g=guidance[tipo];
+if(g){
+  document.getElementById('guidanceTitle').textContent=g.title;
+  document.getElementById('guidanceBody').innerHTML=g.html;
+  document.getElementById('returnIntro').textContent=g.intro;
+}else{
+  document.getElementById('guidanceTitle').textContent='O que a lei garante';
+  document.getElementById('guidanceBody').innerHTML='<p class="muted">Escolha uma situação para ver uma orientação específica, ou leia abaixo as proteções já previstas na legislação brasileira.</p>';
+}
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>
