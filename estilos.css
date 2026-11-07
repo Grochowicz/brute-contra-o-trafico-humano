@@ -1,6 +1,6 @@
 :root{
-  --bg:#E6E4D7;--surface:#E6E4D7;--surface2:#C9E1E7;--sage:#D5E3B6;
-  --ink:#2C3328;--muted:#4E564C;--line:#C9E1E7;--white:#E6E4D7;
+  --bg:#E6E4D7;--surface:#E6E4D7;--surface2:#D3C6BB;--sage:#D5E3B6;
+  --ink:#2C3328;--muted:#4E564C;--line:#D3C6BB;--white:#E6E4D7;
   --shadow:0 12px 32px rgba(44,51,40,.08)
 }
 *{box-sizing:border-box}
@@ -25,7 +25,7 @@ h3{font-size:18px;line-height:1.3;margin:0 0 8px}
 p{margin:8px 0 12px}
 .lead{font-size:18px;color:var(--muted);max-width:700px}
 .soft-note{border:1px solid var(--line);background:var(--sage);border-radius:16px;padding:17px 19px;margin:22px 0;color:var(--ink)}
-.soft-note.warm{background:#C9E1E7}
+.soft-note.warm{background:#D3C6BB}
 .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:17px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
 .card + .card{margin-top:15px}
@@ -33,7 +33,7 @@ p{margin:8px 0 12px}
 .small{font-size:13px}
 .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .btn{display:inline-block;border:0;border-radius:12px;background:var(--sage);color:var(--ink);padding:13px 19px;font-weight:760;box-shadow:0 4px 12px rgba(44,51,40,.08);text-decoration:none}
-.btn:hover{background:#C9E1E7}
+.btn:hover{background:#D3C6BB}
 .btn.secondary{background:var(--surface);border:1px solid var(--line);box-shadow:none}
 .back{display:inline-block;border:0;background:transparent;color:var(--muted);padding:0 0 18px;text-decoration:none}
 .feature{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--line)}
@@ -46,7 +46,7 @@ p{margin:8px 0 12px}
 .choice span{display:block;color:var(--muted);font-size:14px}
 .pill{display:inline-block;background:var(--sage);color:var(--ink);border-radius:30px;padding:5px 10px;font-size:11px;font-weight:850;letter-spacing:.6px}
 .callout{border-left:4px solid var(--sage);background:#D5E3B6;padding:16px 18px;border-radius:0 13px 13px 0;margin:16px 0}
-.callout.warm,.callout.alert{border-color:#C9E1E7;background:#C9E1E7}
+.callout.warm,.callout.alert{border-color:#D3C6BB;background:#D3C6BB}
 .list{padding-left:21px}
 .list li{padding:6px 0}
 .field{margin:17px 0}
@@ -54,7 +54,7 @@ p{margin:8px 0 12px}
 .field input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:var(--white);color:var(--ink)}
 .hint{font-size:13px;color:var(--muted);margin-top:7px}
 .hidden{display:none!important}
-.result{background:#C9E1E7;border:1px solid var(--line);border-radius:14px;padding:17px;margin:11px 0}
+.result{background:#D3C6BB;border:1px solid var(--line);border-radius:14px;padding:17px;margin:11px 0}
 .result p{color:var(--muted);margin:4px 0}
 .contact{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
 .contact strong{font-size:16px}
@@ -74,8 +74,8 @@ cite{font-style:normal;font-weight:800}
   box-shadow:0 10px 28px rgba(44,51,40,.16);
   display:flex;align-items:center;gap:10px
 }
-.sirius-fab:hover{background:#C9E1E7}
-.sirius-fab .dot{width:10px;height:10px;border-radius:50%;background:#C9E1E7}
+.sirius-fab:hover{background:#D3C6BB}
+.sirius-fab .dot{width:10px;height:10px;border-radius:50%;background:#D3C6BB}
 .sirius-panel{
   position:fixed;right:20px;bottom:84px;z-index:60;
   width:min(400px,calc(100vw - 24px));height:min(560px,calc(100vh - 120px));
@@ -101,7 +101,7 @@ cite{font-style:normal;font-weight:800}
   border-radius:999px;padding:6px 10px;font-size:11px;font-weight:750
 }
 .sirius-iconbtn.ghost{background:#E6E4D7;color:var(--muted)}
-.sirius-msgs{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:linear-gradient(180deg,#E6E4D7,#C9E1E7)}
+.sirius-msgs{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:linear-gradient(180deg,#E6E4D7,#D3C6BB)}
 .sirius-msg{max-width:92%;padding:11px 13px;border-radius:14px;font-size:14px;line-height:1.5}
 .sirius-msg.bot{align-self:flex-start;background:#E6E4D7;border:1px solid var(--line);color:var(--ink)}
 .sirius-msg.user{align-self:flex-end;background:var(--sage);color:var(--ink);border:1px solid var(--sage)}
@@ -114,7 +114,7 @@ cite{font-style:normal;font-weight:800}
   border:1px solid var(--line);background:#D5E3B6;color:var(--ink);
   border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;text-align:left
 }
-.sirius-chip:hover{background:#C9E1E7}
+.sirius-chip:hover{background:#D3C6BB}
 .sirius-foot{border-top:1px solid var(--line);padding:10px 12px;background:#E6E4D7}
 .sirius-form{display:flex;gap:8px}
 .sirius-form input{
